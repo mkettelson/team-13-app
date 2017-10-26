@@ -12,17 +12,16 @@ Helpful video:	https://www.youtube.com/watch?v=0fKg7e37bQE
 3. work on the files...
 4. when reached a milestone, commit in GitHub Desktop including a summary of the commits
 5. repository->push
-7. If you experience a merge error, find where you and other person made a change to the same piece of code and resolve the issue. 
+6. If you experience a merge error, find where you and other person made a change to the same piece of code and resolve the issue. 
 
-# Working with the repository- using command line
-1. Open GitHub Desktop
-2. repository->open command prompt
-3. git pull
-4. work on the files...
-5. when reached a milestone, git add .
-6. then, git commit -m "summary of commit"
-7. finally, git push
-8. If you experience a merge error, find where you and other person made a change to the same piece of code and resolve the issue. 
+# Working with the repository- using command line *surprisingly easy*
+First pin the command prompt from GitHub repository->open command prompt to your taskbar for easy access
+1. open command prompt, git pull
+2. work on the files...
+3. when reached a milestone, git add .
+4. then, git commit -m "summary of commit"
+6. finally, git push
+7. If you experience a merge error, find where you and other person made a change to the same piece of code and resolve the issue. 
 
 ALWAYS START AND END WITH A PULL AND PUSH
 
