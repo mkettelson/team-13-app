@@ -17,10 +17,10 @@ Helpful video:	https://www.youtube.com/watch?v=0fKg7e37bQE
 7. If you experience a merge error, find where you and other person made a change to the same piece of code and resolve the issue. 
 
 # command line prompts
-cd..	|	Change directory (folder) up one
-cd Desktop/Documents	|	Change directory to the documents folder in desktop
-ls (Mac or Linux); dir (Windows)	|	List all files in directory
-pwd	|	Tells your present working directory
+-cd..	|	Change directory (folder) up one
+-cd Desktop/Documents	|	Change directory to the documents folder in desktop
+-ls (Mac or Linux); dir (Windows)	|	List all files in directory
+-pwd	|	Tells your present working directory
 git clone	|   clone url 
 git status		|	shows changes
 git add index.html	|	adds the file index.html to directory
