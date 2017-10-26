@@ -1,13 +1,13 @@
 # team-13-app Instructions for this repository (project)
 Helpful video:	https://www.youtube.com/watch?v=0fKg7e37bQE
 
-#Initialize local project files:
+# Initialize local project files:
 1. Using the command line (run-> CMD) get into the directory that you want to clone the project files using the prompts listed below
 2. On the main repository page in github.com select Clone or Download to copy the url to your clipboard.
 	https://github.com/mkettelson/team-13-app.git
 3. in the command line paste the url and the prompt:  git clone https://github.com/mkettelson/team-13-app.git
 
-#Working with the repository
+# Working with the repository
 1. Using the command line get into the project directory
 2. git pull to have everyone’s changes "pulled" to your cloned files
 3. ~work on the files~
