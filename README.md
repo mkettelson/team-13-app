@@ -2,19 +2,29 @@
 Helpful video:	https://www.youtube.com/watch?v=0fKg7e37bQE
 
 # Initialize local project files:
-1. Using the command line (run-> CMD) get into the directory that you want to clone the project files using the prompts listed below
-2. On the main repository page in github.com select Clone or Download to copy the url to your clipboard.
-	https://github.com/mkettelson/team-13-app.git
-3. in the command line paste the url and the prompt:  git clone https://github.com/mkettelson/team-13-app.git
+1. Make a GitHub account
+2. Install GitHub Desktop
+3. Find repository and clone to "open in desktop"
 
-# Working with the repository
-1. Using the command line get into the project directory
-2. git pull to have everyone’s changes "pulled" to your cloned files
+# Working with the repository- using buttons
+1. Open GitHub Desktop
+2. repository->pull 
 3. work on the files...
-4. when reached a milestone, git add . to add any new files (to add changes to existing files also)
-5. then, git commit - m “message” to commit to the changes and give description of changes
-6. git push to push your updated cloned files to github.com
+4. when reached a milestone, commit in GitHub Desktop including a summary of the commits
+5. repository->push
 7. If you experience a merge error, find where you and other person made a change to the same piece of code and resolve the issue. 
+
+# Working with the repository- using command line
+1. Open GitHub Desktop
+2. repository->open command prompt
+3. git pull
+4. work on the files...
+5. when reached a milestone, git add .
+6. then, git commit -m "summary of commit"
+7. finally, git push
+8. If you experience a merge error, find where you and other person made a change to the same piece of code and resolve the issue. 
+
+ALWAYS START AND END WITH A PULL AND PUSH
 
 # command line prompts
 cd..	|	Change directory (folder) up one
