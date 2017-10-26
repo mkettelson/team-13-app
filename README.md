@@ -17,14 +17,26 @@ Helpful video:	https://www.youtube.com/watch?v=0fKg7e37bQE
 7. If you experience a merge error, find where you and other person made a change to the same piece of code and resolve the issue. 
 
 # command line prompts
--cd..	|	Change directory (folder) up one
--cd Desktop/Documents	|	Change directory to the documents folder in desktop
--ls (Mac or Linux); dir (Windows)	|	List all files in directory
--pwd	|	Tells your present working directory
+cd..	|	Change directory (folder) up one
+
+cd Desktop/Documents	|	Change directory to the documents folder in desktop
+
+ls (Mac or Linux); dir (Windows)	|	List all files in directory
+
+pwd	|	Tells your present working directory
+
 git clone	|   clone url 
+
 git status		|	shows changes
+
 git add index.html	|	adds the file index.html to directory
+
 git add .	|	adds all the files in your current directory
+
 git commit -m “added index.html to repository”	|	commits changes include message description
+
 git push	|	pushes all updates save on your device to the repository on github.com
+
 git pull	|	pulls all the updates saved on github.com to the clone on your device
+
+
