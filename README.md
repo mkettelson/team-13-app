@@ -10,7 +10,7 @@ Helpful video:	https://www.youtube.com/watch?v=0fKg7e37bQE
 # Working with the repository
 1. Using the command line get into the project directory
 2. git pull to have everyone’s changes "pulled" to your cloned files
-3. ~work on the files~
+3. work on the files...
 4. when reached a milestone, git add . to add any new files (to add changes to existing files also)
 5. then, git commit - m “message” to commit to the changes and give description of changes
 6. git push to push your updated cloned files to github.com
