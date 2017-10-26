@@ -39,4 +39,8 @@ git push	|	pushes all updates save on your device to the repository on github.co
 
 git pull	|	pulls all the updates saved on github.com to the clone on your device
 
+*tip while typing beginning to type a file name hit Tab to auto-fill to avoid spelling mistakes 
+
+EX) cd Docu->Tab-> Documents
+
 
