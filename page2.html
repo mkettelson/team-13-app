@@ -18,7 +18,24 @@
   <link rel="stylesheet" href="assets/animate.css/animate.min.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-  
+    
+<script type="text/javascript">
+window.onload = function() {
+
+	var ex1 = document.getElementById('selection_1');
+	var ex2 = document.getElementById('selection_2');
+	var ex3 = document.getElementById('selection_3');
+
+	ex1.onclick = handler;
+	ex2.onclick = handler;
+	ex3.onclick = handler;
+
+}
+
+function handler() {
+	alert('clicked');
+}
+</script>
   
   
 </head>
@@ -86,12 +103,15 @@
 							</div>
 						</div>
 						
+						
+
+						
 						<div class="col-xs-12 col-s-4">
 							<div class="form-group">
 								<form>
-								<input type="radio" name="video_selection" value="PJ_Masks" > <b>PJ Masks </b>
-								<input type="radio" name="video_selection" value="Arthur"><b>Arthur</b>
-								<input type="radio" name="video_selection" value="Peppa_Pig"><b>Peppa Pig</b>
+								<input type="radio" name="video_selection" id="selection_1" value="PJ_Masks" > <b>PJ Masks </b>
+								<input type="radio" name="video_selection" id="selection_2" value="Arthur"><b>Arthur</b>
+								<input type="radio" name="video_selection" id="selection_3" value="Peppa_Pig"><b>Peppa Pig</b>
 								</form>
 							</div>
 						</div>
