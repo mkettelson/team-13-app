@@ -19,23 +19,39 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
     
-<script type="text/javascript">
-window.onload = function() {
+  <style>
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 15%;
+	}
 
-	var ex1 = document.getElementById('selection_1');
-	var ex2 = document.getElementById('selection_2');
-	var ex3 = document.getElementById('selection_3');
+	td, th {
+		
+		text-align: center;
+		padding: 8px;
+	}
 
-	ex1.onclick = handler;
-	ex2.onclick = handler;
-	ex3.onclick = handler;
+ </style>
+	
+	
+<!-- <script type="text/javascript"> -->
+<!-- window.onload = function() { -->
 
-}
+	<!-- var ex1 = document.getElementById('selection_1'); -->
+	<!-- var ex2 = document.getElementById('selection_2'); -->
+	<!-- var ex3 = document.getElementById('selection_3'); -->
 
-function handler() {
-	alert('clicked');
-}
-</script>
+	<!-- ex1.onclick = handler; -->
+	<!-- ex2.onclick = handler; -->
+	<!-- ex3.onclick = handler; -->
+
+<!-- } -->
+
+<!-- function handler() { -->
+	<!-- alert('clicked'); -->
+<!-- } -->
+<!-- </script> -->
   
   
 </head>
@@ -92,7 +108,7 @@ function handler() {
 						
 						<div class="col-xs-12 col-s-4">
 							<div class="form-group">
-								<label class="form-control-label" for="form1-4-name"><b>Visit ID: 1711301</b></label>
+								<label class="form-control-label" for="form1-4-name"><h5>Visit ID: 1711301</h5></label>
 								<!-- <input type="text" class="form-control" name="name"  data-form-field="Name" id="form1-4-name"> -->
 							</div>
 						</div>
@@ -106,16 +122,33 @@ function handler() {
 						
 
 						
-						<div class="col-xs-12 col-s-4">
-						<p> Select which video you would like to watch:</p>
-							<div class="form-group">
-								<form>
-								<input type="radio" name="video_selection" id="selection_1" value="PJ_Masks" > <b>PJ Masks </b>
-								<input type="radio" name="video_selection" id="selection_2" value="Arthur"><b>Arthur</b>
-								<input type="radio" name="video_selection" id="selection_3" value="Peppa_Pig"><b>Peppa Pig</b>
-								</form>
-							</div>
-						</div>
+						<!-- <div class="col-xs-12 col-s-4"> -->
+						<h3> Select which video you would like to watch:</h3>
+							<!-- <div class="form-group"> -->
+								<!-- <form> -->
+								<!-- <input type="radio" name="video_selection" id="selection_1" value="PJ_Masks" > <b>PJ Masks </b> -->
+								<!-- <input type="radio" name="video_selection" id="selection_2" value="Arthur"><b>Arthur</b> -->
+								<!-- <input type="radio" name="video_selection" id="selection_3" value="Peppa_Pig"><b>Peppa Pig</b> -->
+								<!-- </form> -->
+							<!-- </div> -->
+						<table>
+						  <tr>
+							<td><input type="radio" name="video_selection" id="selection_1" value="PJ_Masks" ></td>
+							<td>PJ Masks</td>
+						  </tr>
+						  <tr>
+							<td><input type="radio" name="video_selection" id="selection_2" value="Arthur"></td>
+							<td>Arthur</td>
+						  </tr>
+						  <tr>
+							<td><input type="radio" name="video_selection" id="selection_3" value="Peppa_Pig"></td>
+							<td>Peppa Pig</td>
+						  </tr>
+						  <tr>
+							<td><input type="radio" name="video_selection" id="selection_3" value="That's_So_Raven"></td>
+							<td>That's So Raven</td>
+						  </tr>
+						</table>
 						
 						<div class="mbr-section-btn"><a class="btn btn-lg btn-primary" href="page2a.html">Begin Session</a>
 						</div>
