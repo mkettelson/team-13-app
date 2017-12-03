@@ -37,13 +37,34 @@
 						var video = ;
 						</script>
 						
-						<iframe width="1120" height="630" src="https://www.youtube.com/embed/ZYYhewRtIQE" frameborder="0" allowfullscreen></iframe>
-						
-						<!-- <figure class="mbr-figure mbr-figure--adapted mbr-figure--caption-inside-bottom mbr-figure--full-width"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/uXg9_zxDcE4?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=1&amp;playlist=uXg9_zxDcE4" width="1280" height="720" frameborder="0" allowfullscreen></iframe></figure> -->
-
+						<iframe id="myVideo"  width="1120" height="630" src="https://www.youtube.com/embed/gy2VZDJynhQ?autoplay=1" frameborder="0"></iframe>
+							
 						<div class="mbr-section-text">
-							<h1><font color="red">Keep Chewing!</font> </h1>
+							<h1><font color="red">Keep Chewing!</font></h1>
 						</div>
+						
+						
+						
+						<button onclick="playVid()" type="button">Play Video</button>
+						<button onclick="pauseVid()" type="button">Pause Video</button><br> 
+
+						<script> 
+						var vid = document.getElementById("myVideo"); 
+
+						function playVid() { 
+							vid.play(); 
+						} 
+
+						function pauseVid() { 
+							vid.pause(); 
+						} 
+						</script>
+						
+						
+						
+						
+						
+						
                     </div>
                 </div>
             </div>
