@@ -116,13 +116,16 @@
 					</style>
 					
 					<table>
-					  <tr>
-						<th>Bite</th><th>Drink</th><th>Food/Drink</th><th>Delivery</th><th>Behavior</th><th>Comments</th>
-					  </tr>
+                        <col width = "5">
+                        <col width = "10">
+                        <col width = "200">
+                        <col width = "140">
+                        <col width = "90">
+                      
                       <script>
-
                           function tableloop() {
                               var x = "", i;
+                              document.write("<tr><td>Bite  </td><td>Drink  </td><td>Food or Drink         </td><td>Delivery  </td><td>Behavior  </td><td>Comments      </td></tr>");
                               for (i=1; i <=30; i++) {
                                   document.write("<table>");
                                   document.write("<tr>");
