@@ -224,7 +224,43 @@
 
 						<td></td><td></td>
 						<td>
-							<div class="mbr-section-btn"><a class="btn btn-lg btn-black-outline btn-black" href="https://mobirise.com">Save Form</a></div>
+							<div class="mbr-section-btn"><a class="btn btn-lg btn-black-outline btn-black">Save Form</a>
+                                <script>
+<!--                                fileStream = new FileOutputStream("MyLayout.pdf");-->
+<!--                                client.convertFile("file:///Users/keirachoi/Documents/GitHub/team-13-app/page3.html", fileStream);-->
+<!--                                fileStream.close();-->
+public static void generatePDF(String inputHtmlPath, String outputPdfPath)
+{
+    try {
+        String url = new File(inputHtmlPath).toURI().toURL().toString();
+        System.out.println("URL: " + url);
+        
+        OutputStream out = new FileOutputStream(outputPdfPath);
+        
+        //Flying Saucer part
+        ITextRenderer renderer = new ITextRenderer();
+        
+        renderer.setDocument(url);
+        renderer.layout();
+        renderer.createPDF(out);
+        
+        out.close();
+    } catch (DocumentException | IOException e) {
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    }
+}
+                                public static void main(String[] args){
+                                    String inputFile = "C:/Users/keirachoi/Documents/GitHub/team-13-app/page3.html";
+                                    String outputFile = "C:/Users/keirachoi/Desktop/TestPdf.pdf";
+                                    
+                                    generatePDF(inputFile, outputFile);
+                                    
+                                    System.out.println("Done!");
+                                }
+                                </script>
+                            </div>
+                            
 						</td>
 					    <td>
 						<div class="mbr-section-btn"><a class="btn btn-lg btn-black-outline btn-black" href="https://mobirise.com">Email Form</a></div>
