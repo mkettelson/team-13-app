@@ -236,7 +236,6 @@ public static void generatePDF(String inputHtmlPath, String outputPdfPath)
         
         //Flying Saucer part
         ITextRenderer renderer = new ITextRenderer();
-        
         renderer.setDocument(url);
         renderer.layout();
         renderer.createPDF(out);
@@ -247,14 +246,12 @@ public static void generatePDF(String inputHtmlPath, String outputPdfPath)
         e.printStackTrace();
     }
 }
-                                public static void main(String[] args){
-                                    String inputFile = "C:/Users/keirachoi/Documents/GitHub/team-13-app/page3.html";
-                                    String outputFile = "C:/Users/keirachoi/Desktop/TestPdf.pdf";
+                                  //  String inputFile = "C:/Users/keirachoi/Documents/GitHub/team-13-app/page3.html";
+                                  //  String outputFile = "C:/Users/keirachoi/Desktop/TestPdf.pdf";
                                     
                                     generatePDF(inputFile, outputFile);
                                     
                                     System.out.println("Done!");
-                                }
                                 </script>
                             </div>
                             
