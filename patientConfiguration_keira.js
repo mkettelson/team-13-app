@@ -53,29 +53,24 @@
 
 
 //ATTEMPT 3: one HTML page with hidden components
-var t = 0;
+var v = 0;
 function selectVideo() {
 	if (document.getElementById("selection_1").checked == true)
 	{
 		//alert("in if for video 1");
-		var v = 1;
-        t = v;
-	}	
+        v = 1;
+        getVideo();
+	}
 	if (document.getElementById("selection_3").checked == true)
 	{
-		var v = 3;
-        t = v;
+		v = 3;
+        getVideo();
 	}
-    return t;
-}
-
-if (selectVideo() == 1)
-{
-    alert(selectVideo());
+    return v;
 }
 
 function getVideo(){
-	//videoSelection  = selectVideo();
-   // alert("");
+    alert("SELECTED VALUE : " + v);
+    return v;
 }
 
