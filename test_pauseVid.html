@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Stop Embedded Youtube Video Iframe</title>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script>
+$(document).ready(function(){
+	$('a.play-video').click(function(){
+		$("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+	});
+
+	$('a.stop-video').click(function(){
+		$("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+	});
+
+	$('a.pause-video').click(function(){
+		$("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+	});
+});
+</script>
+</head>
+<body>
+<!-- <button type="button" id='playVid' >Begin Session</button> -->
+
+<div><a href="#" class="play-video">Play Video</a></div>
+<div><a href="#" class="stop-video">Stop Video</a></div>
+<div><a href="#" class="pause-video">Pause Video</a></div>
+
+<iframe class="youtube-video1" id="myVideo1" width="1120" height="630" src="https://www.youtube.com/embed/l8hr6E0posc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
+  
+    <!-- <script  src="playPauseStop.js"></script> -->
+
+</body>
+
+</html>
