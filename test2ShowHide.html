@@ -18,7 +18,7 @@
 <link rel="stylesheet" href="assets/animate.css/animate.min.css">
 <link rel="stylesheet" href="assets/theme/css/style.css">
 <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-                                                                    
+ 
 <style>
 	table {
 		font-family: arial, sans-serif;
@@ -34,14 +34,38 @@ td, th {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 <script>
 $(document).ready(function(){
-	$("#hidAllVids").click(function(){
+		$("#myVideo1").hide();
 		$("#myVideo2").hide();
-	});
+		$("#myVideo3").hide();
+		$("#myVideo4").hide();
+		$("#keepChewingText").hide();
+		$("#countdownText").hide();
 	$("#playVid").click(function(){
-        var videoSelection  = selectVideo();   
-		if (videoSelection == 2)
-		{
+        var videoSelection  = selectVideo();
+		$("#keepChewingText").show();
+		$("#countdownText").show();
+		if (videoSelection == 1){
+			$("#myVideo1").show();
+			$("#myVideo2").hide();
+			$("#myVideo3").hide();
+			$("#myVideo4").hide();
+		}else if(videoSelection == 2){
 			$("#myVideo2").show();
+			$("#myVideo1").hide();
+			$("#myVideo3").hide();
+			$("#myVideo4").hide();
+		}else if (videoSelection == 3){
+			$("#myVideo3").show();
+			$("#myVideo1").hide();
+			$("#myVideo2").hide();
+			$("#myVideo4").hide();
+		}else if (videoSelection == 4){
+			$("#myVideo4").show();
+			$("#myVideo1").hide();
+			$("#myVideo2").hide();
+			$("#myVideo3").hide();
+		}else{
+			alert("error in playVid");
 		}
     });
 }); 
@@ -49,18 +73,104 @@ $(document).ready(function(){
 </head>
 <body>
 	<section class="mbr-section mbr-section-hero mbr-section-full header2 mbr-parallax-background" id="header6-6" data-rv-view="25" style="background-image: url(pictures/banana.jpg);">
-		<div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(204, 204, 204);"></div>			
-		<div class="col-xs-12 col-lg-10 col-lg-offset-1" data-form-type="formoid">
-			<div class="mbr-section-btn"><a id='hidAllVids' class="btn btn-lg btn-primary">Click Me</a></div>
-			<table>
-				<tr>
-					<td><input type="radio" onclick="selectVideo()" name="video_selection" id="selection_2" value="Arthur"></td>
-					<td>Arthur</td>
-				</tr>
-			</table>
-			<div class="mbr-section-btn"><a id='playVid' class="btn btn-lg btn-primary">Show Video</a></div>
-		</div>
+		<div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(204, 204, 204);"></div>		
+		<div class="mbr-section mbr-section__container mbr-section__container--middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 text-xs-center">
+                            <h3 class="mbr-section-title display-2">NEW VISIT</h3>
+                        </div>
+                    </div>
+                </div>
+        </div>
+		<div class="mbr-section mbr-section-nopadding">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-lg-10 col-lg-offset-1" data-form-type="formoid">
+						<form method="post" data-form-title="NEW VISIT">
+						<div class="row row-sm-offset">
+							<div class="col-xs-12 col-xs-4">
+								<div class="form-group">
+									<label class="form-control-label" for="form1-4-name"><b> Data File Name: </b></label>
+									<input type="text" class="form-control" name="name"  data-form-field="Name" id="form1-4-name">
+								</div>
+							</div>
+							
+							<div class="col-xs-12 col-md-4">
+								<div class="form-group">
+									<label class="form-control-label" for="form1-4-name"><b>Time Allowance (seconds):</b></label>
+									<input type="text" class="form-control" name="name"  data-form-field="Name" id="form1-4-name">
+								</div>
+							</div>
+							
+							<div class="col-xs-12 col-md-4">
+								<div class="form-group">
+									<label class="form-control-label" for="form1-4-name"><b>Length of Sessions (minutes):</b></label>
+									<input type="text" class="form-control" name="name"  data-form-field="Name" id="form1-4-name">
+								</div>
+							</div>
+							
+							<div class="col-xs-12 col-md-4">
+								<div class="form-group">
+									<label class="form-control-label" for="form1-4-name"><b>Number of Sessions:<b></label>
+									<input type="text" class="form-control" name="name"  data-form-field="Name" id="form1-4-name">
+								</div>
+							</div>
+							
+							<div class="col-xs-12 col-s-4">
+								<div class="form-group">
+									<label class="form-control-label" for="form1-4-name"><h5>Visit ID: 1711301</h5></label>
+								</div>
+							</div>
+							
+							<div class="col-xs-12 col-s-4">
+								<div class="form-group">
+									<input type="checkbox" value="disable_auto_pause"> <b>Disable Auto Pause</b>
+								</div>
+							</div>
+							
+							<h3> Select which video you would like to watch:</h3>
+					
+							<table>
+								<tr>
+									<td><input type="radio" onclick="selectVideo()" name="video_selection" id="selection_1" value="PJ_Masks" ></td>
+									<td>Daniel Tiger's Neighborhood</td>
+								</tr>
+								<tr>
+									<td><input type="radio" onclick="selectVideo()" name="video_selection" id="selection_2" value="Arthur"></td>
+									<td>Arthur</td>
+								</tr>
+								<tr>
+									<td><input type="radio" onclick="selectVideo()" name="video_selection" id="selection_3" value="Peppa_Pig"></td>
+									<td>My Little Pony</td>
+								</tr>
+								<tr>
+									<td><input type="radio" onclick="selectVideo()" name="video_selection" id="selection_4" value="That's_So_Raven"></td>
+									<td>That's So Raven</td>
+								</tr>
+							</table>
+					
+							<div class="mbr-section-btn"><a id='playVid' class="btn btn-lg btn-primary">Show Video</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>				
 	</section>
-	<iframe id="myVideo2" width="1120" height="630" src="https://www.youtube.com/embed/gy2VZDJynhQ?autoplay=0" frameborder="0"></iframe>
+	<table>
+		<tr>
+			<td>
+				<iframe id="myVideo1"  width="1120" height="630" src="https://www.youtube.com/embed/l8hr6E0posc?autoplay=0" frameborder="0"></iframe>
+				<iframe id="myVideo2" width="1120" height="630" align="center" src="https://www.youtube.com/embed/gy2VZDJynhQ?autoplay=0" frameborder="0"></iframe>
+				<iframe id="myVideo3"  width="1120" height="630" src="https://www.youtube.com/embed/fuGLHHbmNFg?autoplay=0" frameborder="0"></iframe>
+				<iframe id="myVideo4"  width="1120" height="630" align="center" src="https://www.youtube.com/embed/6b7GXofc3M4?autoplay=0" frameborder="0"></iframe>
+			<td>
+				<p><font id="keepChewingText"  color="red" size="6">Keep Chewing!</font></p><br />
+				<p><font id="countdownText"  color="blue" size="7">5</font></p>
+
+			</td>
+		</tr>
+
+	</table>
 </body>							
 </html>

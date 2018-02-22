@@ -55,16 +55,16 @@
 //ATTEMPT 3: one HTML page with hidden components
 var v = 0;
 function selectVideo() {
-	if (document.getElementById("selection_2").checked == true)
-	{
-		//alert("in if for video 2");
+	if (document.getElementById("selection_1").checked == true){
+        v = 1;
+	}else if (document.getElementById("selection_2").checked == true){
         v = 2;
-        getVideo();
-	}
-	if (document.getElementById("selection_4").checked == true)
-	{
-		v = 4;
-        getVideo();
+	}else if (document.getElementById("selection_3").checked == true){
+		v=3;
+	}else if (document.getElementById("selection_4").checked == true){
+		v=4;
+	}else{
+		v=10000000000;
 	}
     return v;
 }
