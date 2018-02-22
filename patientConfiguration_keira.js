@@ -55,22 +55,32 @@
 //ATTEMPT 3: one HTML page with hidden components
 var v = 0;
 function selectVideo() {
-	if (document.getElementById("selection_1").checked == true)
+	if (document.getElementById("selection_2").checked == true)
 	{
-		//alert("in if for video 1");
-        v = 1;
+		//alert("in if for video 2");
+        v = 2;
         getVideo();
 	}
-	if (document.getElementById("selection_3").checked == true)
+	if (document.getElementById("selection_4").checked == true)
 	{
-		v = 3;
+		v = 4;
         getVideo();
 	}
     return v;
 }
 
-function getVideo(){
-    alert("SELECTED VALUE : " + v);
-    return v;
-}
+// function getVideo(){
+    // alert("SELECTED VALUE : " + v);
+    // return v;
+// }
 
+// function playVid(var v){
+    // $("#playVid").click(function(){
+        // if(v==2){
+		// $("#myVideo2").show();
+		// }
+		// if(v==4){
+		// $("#myVideo4").show();
+		// }
+    // });
+// }

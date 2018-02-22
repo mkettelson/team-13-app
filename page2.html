@@ -30,9 +30,29 @@ td, th {
 	
 	text-align: center;
 	padding: 8px;
+	}
+</style>
+<script>
+$(document).ready(function(){
+    $(".btn1").click(function(){
+        $("#myVideo2").hide();
+        
+    });
+    $(".btn2").click(function(){
+        $("#myVideo2").show();
+    });
+});
+</script>
+<script>
+<!-- $(function hideAllVideos(){ -->
+<!-- $("#myVideo2").hide(); -->
+<!-- $("#myVideo4").hide(); -->
+<!-- }); -->
+function showVideo2(){
+	$("#myVideo").show();
 }
 
-</style>                                                                  
+</script>                                                                 
 </head>
     <body>
         <section class="mbr-section mbr-section-hero mbr-section-full header2 mbr-parallax-background" id="header6-6" data-rv-view="25" style="background-image: url(pictures/banana.jpg);">
@@ -99,13 +119,13 @@ td, th {
                                     </div>
                                     
 									
-									<iframe id="myVideo"  width="1120" height="630" src="https://www.youtube.com/embed/gy2VZDJynhQ?autoplay=0" frameborder="0"></iframe>
-									<button onclick='video.paused ? video.play() : video.pause()'>Play/Pause</button>
-									<script>
-									  var video = document.getElementById('myVideo');
-									  var duration = document.getElementById('myVideo').duration;
-									  document.write(duration);
-									</script>
+									<!-- <iframe id="myVideo"  width="1120" height="630" src="https://www.youtube.com/embed/gy2VZDJynhQ?autoplay=0" frameborder="0"></iframe> -->
+									<!-- <button onclick='video.paused ? video.play() : video.pause()'>Play/Pause</button> -->
+									<!-- <script> -->
+									  <!-- var video = document.getElementById('myVideo'); -->
+									  <!-- var duration = document.getElementById('myVideo').duration; -->
+									  <!-- document.write(duration); -->
+									<!-- </script> -->
 									
                                     
                                     <!-- <div class="col-xs-12 col-s-4"> -->
@@ -139,15 +159,9 @@ td, th {
                                     <div class="mbr-section-btn"><a class="btn btn-lg btn-primary" href="page2a.html">Begin Session</a>
                                     </div>
                                     
-                                    <!-- trying video play on this page -->
-                                    
-                                    
-                                    <!-- <iframe id="myVideo"  width="1120" height="630" src="https://www.youtube.com/embed/gy2VZDJynhQ?autoplay=0" frameborder="0"></iframe> -->
-                                    
-                                    
                                     <div class="mbr-section-btn"><a id='playVid' class="btn btn-lg btn-primary">Show Video</a>
                                     </div>
-                                    
+									
                                      <script>
                                         document.getElementById('playVid').onclick = function (){
                                             //document.write("yes! THE VALUE IS 1 PLAY VIDEO SELECTION ONE");
@@ -164,7 +178,9 @@ td, th {
 											if (videoSelection == 2)
                                             {
                                                // document.write("What to change?");
-												document.write(videoSelection);
+												//document.write(videoSelection);
+												showVideo2();
+												
 												
                                             }
 											if (videoSelection == 3)
@@ -189,13 +205,18 @@ td, th {
                             
                             
                             <!-- JAVA SCRIPT -->
-							<script src="patientConfiguration_keira.js"></script>
-                            
-                            
-                            
-                            
+							<script src="patientConfiguration_keira.js"></script>    
+<button class="btn1">Hide</button>
+		<button class="btn2">Show</button>							
                             
         </section>
+		
+		<iframe id="myVideo"  width="1120" height="630" src="https://www.youtube.com/embed/gy2VZDJynhQ?autoplay=1" frameborder="0"></iframe>
+		
+		
+		
+		<!-- <iframe id="myVideo2"  width="1120" height="630" src="https://www.youtube.com/embed/gy2VZDJynhQ?autoplay=0" frameborder="0"></iframe> -->
+		<!-- <iframe id="myVideo4"  width="1120" height="630" src="https://www.youtube.com/embed/6b7GXofc3M4?autoplay=0" frameborder="0"></iframe> -->
         
         <script src="assets/web/assets/jquery/jquery.min.js"></script>
         <script src="assets/tether/tether.min.js"></script>
