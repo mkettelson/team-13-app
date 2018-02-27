@@ -30,7 +30,6 @@ td, th {
 	padding: 8px;
 	}
 </style>  
-<!-- <script  src="playPauseStop.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script>
@@ -43,17 +42,16 @@ $(document).ready(function(){
 		$("#countdownText").hide();
 	$("#playVid").click(function(){
         var videoSelection  = selectVideo();
+		$("#myVideo2")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
 		$("#keepChewingText").show();
 		$("#countdownText").show();
 		if (videoSelection == 1){
 			$("#myVideo1").show();
-			
-			$("#myVideo2")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-			
 			$("#myVideo2").hide();
 			$("#myVideo3").hide();
 			$("#myVideo4").hide();
 		}else if(videoSelection == 2){
+			
 			$("#myVideo2").show();
 			$("#myVideo1").hide();
 			$("#myVideo3").hide();
@@ -74,6 +72,21 @@ $(document).ready(function(){
     });
 }); 
 </script> 
+<!-- <script> -->
+<!-- $(document).ready(function(){ -->
+	<!-- $("#playVid").click(function(){ -->
+		<!-- $("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*'); -->
+	<!-- }); -->
+
+	<!-- $("#stopVid").click(function(){ -->
+		<!-- $("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*'); -->
+	<!-- }); -->
+
+	<!-- $('a.pause-video').click(function(){ -->
+		<!-- $("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*'); -->
+	<!-- }); -->
+<!-- }); -->
+<!-- </script> -->
 <script>  
 var v = 0;
 function selectVideo() {
@@ -91,11 +104,11 @@ function selectVideo() {
     return v;
 }
 </script> 
-<script>
-function pauseVid() { 
-    document.getElementById("myVideo1").pause(); 
-} 
-</script>                                                  
+<!-- <script> -->
+<!-- function pauseVid() {  -->
+    <!-- document.getElementById("myVideo1").pause();  -->
+<!-- }  -->
+<!-- </script>                                                   -->
 </head>
 <body>
 	<section class="mbr-section mbr-section-hero mbr-section-full header2 mbr-parallax-background" id="header6-6" data-rv-view="25" style="background-image: url(pictures/banana.jpg);">
@@ -175,7 +188,7 @@ function pauseVid() {
 									<td>That's So Raven</td>
 								</tr>
 							</table>
-					<button onclick="pauseVid()" type="button">Pause Video</button><br> 
+					<!-- <div class="mbr-section-btn"><a id='stopVid' class="btn btn-lg btn-primary">stop</a></div> -->
 							<div class="mbr-section-btn"><a id='playVid' class="btn btn-lg btn-primary">Begin Session</a></div>
 						</div>
 					</div>

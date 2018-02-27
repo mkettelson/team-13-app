@@ -1,36 +1,199 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Stop Embedded Youtube Video Iframe</title>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Mobirise v4.3.2, mobirise.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+<meta name="description" content="Website Builder Description">
+<title>NEW VISIT</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin">
+<link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
+<link rel="stylesheet" href="assets/tether/tether.min.css">
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/animate.css/animate.min.css">
+<link rel="stylesheet" href="assets/theme/css/style.css">
+<link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+ 
+<style>
+	table {
+		font-family: arial, sans-serif;
+		border-collapse: collapse;
+		width: 15%;
+	}
+td, th {
+	text-align: center;
+	padding: 8px;
+	}
+</style>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
 $(document).ready(function(){
-	$('a.play-video').click(function(){
-		$("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-	});
-
-	$('a.stop-video').click(function(){
+		$("#myVideo1").hide();
+		$("#myVideo2").hide();
+		$("#myVideo3").hide();
+		$("#myVideo4").hide();
+		$("#keepChewingText").hide();
+		$("#countdownText").hide();
+	$("#playVid").click(function(){
+		var videoSelection  = selectVideo();
 		$("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-	});
-
-	$('a.pause-video').click(function(){
-		$("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+		$("#myVideo2")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+		$("#myVideo3")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+		$("#myVideo4")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+		$("#keepChewingText").show();
+		$("#countdownText").show();
+		if (videoSelection == 1){
+			$("#myVideo1").show();
+			$("#myVideo2").hide();
+			$("#myVideo3").hide();
+			$("#myVideo4").hide();
+		}else if(videoSelection == 2){
+			
+			$("#myVideo2").show();
+			$("#myVideo1").hide();
+			$("#myVideo3").hide();
+			$("#myVideo4").hide();
+		}else if (videoSelection == 3){
+			$("#myVideo3").show();
+			$("#myVideo1").hide();
+			$("#myVideo2").hide();
+			$("#myVideo4").hide();
+		}else if (videoSelection == 4){
+			$("#myVideo4").show();
+			$("#myVideo1").hide();
+			$("#myVideo2").hide();
+			$("#myVideo3").hide();
+		}else{
+			alert("error in playVid");
+		}
 	});
 });
 </script>
+<script>  
+var v = 0;
+function selectVideo() {
+	if (document.getElementById("selection_1").checked == true){
+        v = 1;
+	}else if (document.getElementById("selection_2").checked == true){
+        v = 2;
+	}else if (document.getElementById("selection_3").checked == true){
+		v=3;
+	}else if (document.getElementById("selection_4").checked == true){
+		v=4;
+	}else{
+		v=10000000000;
+	}
+    return v;
+}
+</script> 
 </head>
 <body>
-<!-- <button type="button" id='playVid' >Begin Session</button> -->
+	<section class="mbr-section mbr-section-hero mbr-section-full header2 mbr-parallax-background" id="header6-6" data-rv-view="25" style="background-image: url(pictures/banana.jpg);">
+		<div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(204, 204, 204);"></div>		
+		<div class="mbr-section mbr-section__container mbr-section__container--middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 text-xs-center">
+                            <h3 class="mbr-section-title display-2">NEW VISIT</h3>
+                        </div>
+                    </div>
+                </div>
+        </div>
+		<div class="mbr-section mbr-section-nopadding">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-lg-10 col-lg-offset-1" data-form-type="formoid">
+						<form method="post" data-form-title="NEW VISIT">
+						<div class="row row-sm-offset">
+							<div class="col-xs-12 col-xs-4">
+								<div class="form-group">
+									<label class="form-control-label" for="form1-4-name"><b> Data File Name: </b></label>
+									<input type="text" class="form-control" name="name"  data-form-field="Name" id="form1-4-name">
+								</div>
+							</div>
+							
+							<div class="col-xs-12 col-md-4">
+								<div class="form-group">
+									<label class="form-control-label" for="form1-4-name"><b>Time Allowance (seconds):</b></label>
+									<input type="text" class="form-control" name="name"  data-form-field="Name" id="form1-4-name">
+								</div>
+							</div>
+							
+							<div class="col-xs-12 col-md-4">
+								<div class="form-group">
+									<label class="form-control-label" for="form1-4-name"><b>Length of Sessions (minutes):</b></label>
+									<input type="text" class="form-control" name="name"  data-form-field="Name" id="form1-4-name">
+								</div>
+							</div>
+							
+							<div class="col-xs-12 col-md-4">
+								<div class="form-group">
+									<label class="form-control-label" for="form1-4-name"><b>Number of Sessions:<b></label>
+									<input type="text" class="form-control" name="name"  data-form-field="Name" id="form1-4-name">
+								</div>
+							</div>
+							
+							<!-- <div class="col-xs-12 col-s-4"> -->
+								<!-- <div class="form-group"> -->
+									<!-- <label class="form-control-label" for="form1-4-name"><h5>Visit ID: 1711301</h5></label> -->
+								<!-- </div> -->
+							<!-- </div> -->
+							
+							<div class="col-xs-12 col-s-4">
+								<div class="form-group">
+									<input type="checkbox" value="disable_auto_pause"> <b>Disable Auto Pause</b>
+								</div>
+							</div>
+							
+							<h3> Select which video you would like to watch:</h3>
+					
+							<table>
+								<tr>
+									<td><input type="radio" onclick="selectVideo()" name="video_selection" id="selection_1" value="PJ_Masks" ></td>
+									<td>Daniel Tiger's Neighborhood</td>
+								</tr>
+								<tr>
+									<td><input type="radio" onclick="selectVideo()" name="video_selection" id="selection_2" value="Arthur"></td>
+									<td>Arthur</td>
+								</tr>
+								<tr>
+									<td><input type="radio" onclick="selectVideo()" name="video_selection" id="selection_3" value="My Little Pony"></td>
+									<td>My Little Pony</td>
+								</tr>
+								<tr>
+									<td><input type="radio" onclick="selectVideo()" name="video_selection" id="selection_4" value="That's_So_Raven"></td>
+									<td>That's So Raven</td>
+								</tr>
+							</table>
+					<!-- <div class="mbr-section-btn"><a id='stopVid' class="btn btn-lg btn-primary">stop</a></div> -->
+							<div class="mbr-section-btn"><a id='playVid' class="btn btn-lg btn-primary">Begin Session</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>				
+	</section>
+	<table>
+		<tr>
+			<td>
+				<iframe class="youtube-video1" id="myVideo1" width="1120" height="630" src="https://www.youtube.com/embed/l8hr6E0posc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" ></iframe>
+				<iframe class="youtube-video2" id="myVideo2" width="1120" height="630" src="https://www.youtube.com/embed/gy2VZDJynhQ??enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" ></iframe>
+				<iframe class="youtube-video3" id="myVideo3" width="1120" height="630" src="https://www.youtube.com/embed/fuGLHHbmNFg?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" ></iframe>
+				<iframe class="youtube-video4" id="myVideo4" width="1120" height="630" src="https://www.youtube.com/embed/6b7GXofc3M4?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" ></iframe>
+				<!-- <iframe id="myVideo4"  width="1120" height="630" align="center" src="https://www.youtube.com/embed/6b7GXofc3M4?autoplay=0" frameborder="0"></iframe> -->
+			<td>
+				<p><font id="keepChewingText"  color="red" size="6">Keep Chewing!</font></p><br />
+				<p><font id="countdownText"  color="blue" size="7">5</font></p>
+			</td>
+		</tr>
 
-<div><a href="#" class="play-video">Play Video</a></div>
-<div><a href="#" class="stop-video">Stop Video</a></div>
-<div><a href="#" class="pause-video">Pause Video</a></div>
-
-<iframe class="youtube-video1" id="myVideo1" width="1120" height="630" src="https://www.youtube.com/embed/l8hr6E0posc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
-  
-    <!-- <script  src="playPauseStop.js"></script> -->
-
-</body>
+	</table>
+</body>							
 
 </html>
