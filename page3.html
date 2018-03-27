@@ -226,7 +226,9 @@
 						<td>
 							<div class="mbr-section-btn"><a class="btn btn-lg btn-black-outline btn-black">Save Form</a>
                                 <script>
-public static void generatePDF(String inputHtmlPath, String outputPdfPath)
+                                    alert("WORKING");
+
+function generatePDF(String inputHtmlPath, String outputPdfPath)
 {
     try {
         String url = new File(inputHtmlPath).toURI().toURL().toString();

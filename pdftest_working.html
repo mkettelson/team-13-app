@@ -48,7 +48,7 @@
         tableloop();
         </script>
         </div>
-    </body>
+
 <!--    <div class="mbr-section-btn"><a class="btn btn-lg btn-black-outline btn-black">Save Form</a>-->
 <!--        <script>-->
 <!--        alert('Hi!');-->
@@ -76,17 +76,14 @@
                              });
                 doc.save('sample-file.pdf');
                 }); */
-    var pdf = new jsPDF('p','pt','letter');
-    var specialElementHandlers = {'#editor': function(element,renderer) { return true;} };
-    
-    $('#cmd').click(function () {
-                    pdf.fromHTML($('#content')[0], 15, 15, {
-                                 'width': 170,
-                                 'elementHandlers': specialElementHandlers
-                                 });
-                    pdf.save('sample-file.pdf');
-                    });
+    function printDocument() {
+        var x = document.getElementById("content"); x.print();
+    }
     </script>
+    <object type="application/pdf" width="550" height="550" data="content" name="blabla.pdf"></object>
+<!--    <object type="application/pdf" data="myDoc.pdf#toolbar=1&navpanes=0&scrollbar=1&page=1&zoom=100"  width="600px" height="400px" VIEWASTEXT><p>It appears you don't have a PDF plugin for your browser.<a target="_blank" href="myDoc.pdf">Click here to download the PDF file.</a></p></object>-->
+    <button onclick="printDocument()">Please Print...</button>
+    </body>
 </html>
 
 
