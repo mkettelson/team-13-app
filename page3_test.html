@@ -21,6 +21,7 @@
    
 </head>
 <body>
+<div id = "content">
 <section class="mbr-section mbr-section-hero mbr-section-full mbr-section-with-arrow mbr-parallax-background" id="header1-0" data-rv-view="0" style="background-image: url(pictures/orange.jpg);">    
     <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(204, 204, 204);"></div>
 	<div class="mbr-section mbr-section__container mbr-section__container--middle">
@@ -226,16 +227,44 @@
 						<td>
 <!--                            <div class="mbr-section-btn"><a class="btn btn-lg btn-black-outline btn-black">Save Form</a>-->
                             <form>
-                                <input type = "button" value="Save Form" onclick="msg()">
+<!--                                <input type = "button" value="Save Form" onclick="msg()">-->
+                                <div id = "editor"></div>
+                                <button id ="cmd"> Generate PDF</button>
                                     </form>
+                            <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
                                 <script>
+                                    var doc = new jsPDF();
+                                    /*
                                     function msg() {
                                         //generatePDF(inputFile, outputFile);
-                                        
+                                        //alert("i am here");
                                         //System.out.println("Done!");
-                                        alert('I am here!');
+                                        generatePDF();
+                                        doc.save('sample.pdf');
                                     }
-                                    public static void generatePDF(String inputHtmlPath, String outputPdfPath)
+                                
+                                function generatePDF() {
+                                    var inputFile = "C:/Users/keirachoi/Documents/GitHub/team-13-app/page3.html";
+                                    var outputFile = "C:/Users/keirachoi/Desktop/TestPdf.pdf";
+                                    alert("Output file location: \n" + outputFile);
+
+                                  // alert("i am here");
+                                }
+                                */
+                                var specialElementHandlers = {'#editor': function(element,renderer) { return true;} };
+                                
+                                //}
+                                
+                                $('#cmd').click(function () {
+                                                doc.fromHTML($('#content').html(), 15, 15, {
+                                                             'width': 170,
+                                                             'elementHandlers': specialElementHandlers
+                                                             });
+                                                doc.save('sample-file.pdf');
+                                                });
+ /*
+ function generatePDF(String inputHtmlPath, String outputPdfPath)
                                     {
                                         try {
                                             String url = new File(inputHtmlPath).toURI().toURL().toString();
@@ -257,7 +286,7 @@
                                     }
                                   //  String inputFile = "C:/Users/keirachoi/Documents/GitHub/team-13-app/page3.html";
                                   //  String outputFile = "C:/Users/keirachoi/Desktop/TestPdf.pdf";
-                                
+*/
                                 </script>
 <!--                            </div>-->
 
@@ -295,4 +324,5 @@
   
   <input name="animation" type="hidden">
   </body>
+</div>
 </html>
