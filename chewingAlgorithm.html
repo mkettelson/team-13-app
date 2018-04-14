@@ -35,7 +35,7 @@ $(document).ready(function(){
 	});
 	var chewing = 0;
 	while (session == 1){
-		//PAUSE VIDEO
+		$("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
 		
 		//****************
 		var isChewing = 1; 
@@ -45,7 +45,7 @@ $(document).ready(function(){
 			chewing = 1;
 		}
 		while (chewing == 1){
-			//PLAY VIDEO
+			$("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
 			
 			//****************
 			var isChewing = 0; 
@@ -74,6 +74,10 @@ $(document).ready(function(){
 	<div class="mbr-section-btn"><a id='playVid' class="btn btn-lg btn-primary">Begin Session</a></div>
 	<div class="mbr-section-btn"><a id='endVid' class="btn btn-lg btn-primary">End Session</a></div>
 	
+	<!-- how to stop video -->
+	<!-- $("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*'); -->
+	
+	<iframe class="youtube-video1" id="myVideo1" width="747" height="420" src="https://www.youtube.com/embed/l8hr6E0posc?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" ></iframe>
 
 </body>
 
