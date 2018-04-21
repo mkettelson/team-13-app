@@ -63,7 +63,8 @@ $(document).ready(function(){
 			}
 		}
 	}
-	//VIDEOSTOP
+
+	document.getElementById("testText").innerHMTL = STOP
 	
 	
 });
@@ -73,7 +74,7 @@ $(document).ready(function(){
 <body>
 	<div class="mbr-section-btn"><a id='playVid' class="btn btn-lg btn-primary">Begin Session</a></div>
 	<div class="mbr-section-btn"><a id='endVid' class="btn btn-lg btn-primary">End Session</a></div>
-	
+	<p id="testText"></p>
 	<!-- how to stop video -->
 	<!-- $("#myVideo1")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*'); -->
 	
