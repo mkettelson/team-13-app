@@ -44,7 +44,8 @@ while True:
         except:
             time.sleep(.1)
     print FullArray
-    f = open(filepath + '\Chewing Session ' + SessionNumber + ' ' + StartTime + '.html','a+')
+#   f = open(filepath + '\Chewing Session ' + SessionNumber + ' ' + StartTime + '.html','a+')
+    f = open(filepath + '\Chewing Session.html','a+')
     f.truncate(0)
     chew = 0
     if (str(FullArray) == '[1]'):
