@@ -21,7 +21,7 @@ filepath = os.path.dirname(os.path.realpath(__file__))
 #gets the filepath this file is placed in and then displays it
 print filepath
 
-SerialPort = list(list_ports.grep('usbmodem1411'))[0][0]
+SerialPort = list(list_ports.grep('Arduino'))[0][0]
 #Searches all serial ports and finds the one named Arduino Yun. Should be COM1, COM2, etc
 SessionNumber = raw_input("Enter in Session Number: ")
 print 'Current COM port is: ' + SerialPort
